@@ -13,14 +13,23 @@ const Header = () => {
 			<Link className="hamburger" onClick={() => setMenuOpen(() => !menuOpen)}>
 				<FaBars style={{ fontSize: "25px", margin: "10px" }} />
 			</Link>
-			<nav clasName={`${menuOpen && "mobile-open"}`}>
-				<NavLink className={`nav-link `} to="/about">
+			<nav className={menuOpen ? "mobile-open" : ""}>
+				<NavLink
+					className={`nav-link ${({ isActive }) => isActive && "active"}`}
+					to="/about"
+				>
 					About
 				</NavLink>
-				<NavLink className={`nav-link  `} to="/projects">
+				<NavLink
+					className={`nav-link ${({ isActive }) => isActive && "active"}`}
+					to="/projects"
+				>
 					Projects
 				</NavLink>
-				<NavLink className={`nav-link `} to="/contact">
+				<NavLink
+					className={`nav-link ${({ isActive }) => isActive && "active"}`}
+					to="/contact"
+				>
 					Contact
 				</NavLink>
 			</nav>
