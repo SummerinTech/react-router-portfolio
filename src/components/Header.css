@@ -1,3 +1,7 @@
+.Header .active {
+	color: black;
+}
+
 .Header {
 	display: flex;
 	align-items: center;
@@ -12,18 +16,54 @@ a {
 	letter-spacing: 1px;
 }
 
+.Header h3 {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
 .Header h3:hover {
 	transform: scale(1.1);
 	padding: 0 0.1em;
 }
 
+.Header .hamburger {
+	color: whitesmoke;
+	width: 10px;
+	display: none;
+	position: absolute;
+	left: 90%;
+}
+
 .Header .nav-link {
 	text-decoration: none;
-	padding: 0 10px;
+	padding: 10px;
 	text-transform: uppercase;
 	color: white;
+	display: inline-block;
+	border-radius: 0.5rem;
 }
 
 .Header .nav-link:hover {
 	color: black;
+}
+
+/* Responsive Design */
+
+@media (max-width: 600px) {
+	.Header .hamburger {
+		display: block;
+	}
+	.Header nav {
+		display: none;
+		width: 100%;
+		flex-direction: column;
+		align-items: start;
+		margin-bottom: 0.25rem;
+	}
+
+	.Header nav.mobile-open {
+		display: flex;
+		width: 100%;
+		text-align: center;
+	}
 }

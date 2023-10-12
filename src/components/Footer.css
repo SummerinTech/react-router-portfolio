@@ -16,3 +16,11 @@
 .Footer .open-source:hover {
 	color: black;
 }
+
+/* Responsive Design */
+
+@media (max-width: 600px) {
+	.Footer .author-credits {
+		display: none;
+	}
+}

@@ -16,7 +16,7 @@ const Footer = () => {
 				>
 					Open-Source Code
 				</Link>{" "}
-				by Summer Robinson | {year}
+				<span className="author-credits">by Summer Robinson</span> | {year}
 			</p>
 		</footer>
 	);
