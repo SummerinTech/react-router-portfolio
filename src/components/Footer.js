@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Footer.css";
 
 const Footer = () => {
@@ -7,7 +8,16 @@ const Footer = () => {
 
 	return (
 		<footer className="Footer">
-			<p>C {year} by Summer Robinson</p>
+			<p>
+				<Link
+					className="open-source"
+					to="https://github.com/SummerinTech/react-router-portfolio"
+					target="_blank"
+				>
+					Open-Source Code
+				</Link>{" "}
+				by Summer Robinson | {year}
+			</p>
 		</footer>
 	);
 };

@@ -6,3 +6,13 @@
 	text-align: center;
 	width: 100%;
 }
+
+.Footer .open-source {
+	color: whitesmoke;
+	text-decoration: underline;
+	padding: 0 0.1em;
+}
+
+.Footer .open-source:hover {
+	color: black;
+}
